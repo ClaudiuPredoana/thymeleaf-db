@@ -15,9 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/employees")
 public class EmployeeController {
 
-	//load employee data
-	private List<Employee> theEmployees;
-	
 	@PostConstruct
 	private void loadData() {
 		
