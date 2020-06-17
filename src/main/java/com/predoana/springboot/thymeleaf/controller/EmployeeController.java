@@ -26,7 +26,10 @@ public class EmployeeController {
 	
 	@GetMapping("/list")
 	public String listEmployee(Model theModel) {
-		
+
+		//get employees from database
+		List<Employee> theEmployees = employeeService.findAll();
+
 		//add to the string model
 		theModel.addAttribute("employees", theEmployees);
 		
